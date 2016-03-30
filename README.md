@@ -14,17 +14,23 @@ http://metavo.metacentrum.cz/cs/application/index.html
 ## After having account at Metavo
 
 ssh [user]@nympha.zcu.cz # login to cluster
+
 matlab # runs matlab
+
 qstat -u [user] # output tasks
 
 ## Setup project
 
 git clone https://github.com/gufy/matlab-rgp-example
+
 cd matlab-rgp-example
+
 module add matlab
+
 matlab
 
 ## In Matlab...
 
 text_experiments
+
 run_experiments
