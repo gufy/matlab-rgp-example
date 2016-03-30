@@ -74,7 +74,6 @@ i = i + 1;
 
 %% 
 
-paths_to_project = '/storage/plzen1/home/goophy/sample';
 exppath_short = paths_to_project;
 walltime = '4h';
 
@@ -108,7 +107,7 @@ totalComb = cp_get_total_comb_of_params(P);
 for I = 1:totalComb
     display(['Creating task: ', int2str(I), '/', int2str(totalComb)]);
     p = cp_get_params_from_index(I, P);
-    createTask(job, @run_experiment, 0, {p, paths_to_project});
+    createTask(job, @run_experiment, 0, {I, p, paths_to_project});
 end
 
 submit(job);
